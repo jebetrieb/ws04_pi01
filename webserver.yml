@@ -4,12 +4,12 @@
   become: yes
   gather_facts: False
   tasks:
-    - name Install Apache
+    - name: Install Apache
       apt:
-      - name: apache2
+        name: apache2
         state: latest
         
-    - name Start Service
+    - name: Start Service
       service:
         name: apache2
         enabled: yes
